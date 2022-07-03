@@ -57,7 +57,7 @@ Técnologias utilizadas:
 <ul>
   <li style="display: flex; flex-direction: row; justify-content: center;">Tela Home <br>
     <img
-      src="https://user-images.githubusercontent.com/89823203/177025955-89a6b1e4-5009-4de3-98d1-34c230e3f461.png"
+      src="https://user-images.githubusercontent.com/89823203/177059981-478ea545-3ff6-4492-b053-b0729be5df7d.png"
       alt="Alt text"
       title="Optional title"
       style="display: inline-block; margin: 0 auto; width: 70%"
