@@ -111,5 +111,13 @@ Técnologias utilizadas:
       style="display: inline-block; margin: 0 auto; width: 40%"
     >
   </li>
+  <li style="display: flex; flex-direction: row; justify-content: center;">Tela percentual<br>
+    <img
+      src="https://user-images.githubusercontent.com/89823203/177059915-53653cb4-9cc8-4f0d-874c-542bdd6e09bd.png"
+      alt="Alt text"
+      title="Optional title"
+      style="display: inline-block; margin: 0 auto; width: 70%"
+    >
+  </li>
 </ul>
 
