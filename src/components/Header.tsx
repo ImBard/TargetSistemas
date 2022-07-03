@@ -10,7 +10,7 @@ export function Header() {
   }
 
   return (
-    <header className="w-full py-5 flex justify-between px-10 bg-gray-700 border-b border-gray-600">
+    <header className="w-screen fixed py-5 flex justify-between px-10 bg-gray-700 border-b border-gray-600">
       <img src={Logo} alt="" className="w-20" />
       <button
         onClick={() => go('/')}
