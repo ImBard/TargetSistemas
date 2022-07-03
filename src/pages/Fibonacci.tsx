@@ -17,26 +17,28 @@ export function Fibonacci() {
 
 
   async function fiboCount() {
-    let penultimate = 0;
-    let last = {
-      fibo: 1,
-      key: 0
-    };
-    const list = [last]
+    if (num != 0) {
+      let penultimate = 1;
+      let last = {
+        fibo: 0,
+        key: 0
+      };
+      const list = [last]
 
-    for (let i = 1; i < num; i++) {
-      const fibo = penultimate + last.fibo
-      penultimate = last.fibo;
-      last = {
-        fibo: fibo,
-        key: i
+      for (let i = 1; i < num; i++) {
+        const fibo = penultimate + last.fibo
+        penultimate = last.fibo;
+        last = {
+          fibo: fibo,
+          key: i
+        }
+        list.push(last)
+
       }
-      list.push(last)
 
+      list.find(item => item.fibo == num) != undefined ? setHasFibo(true) : (setHasFibo(false), setNot("Este número não está na lista"))
+      setFibonacci(list)
     }
-
-    list.find(item => item.fibo == num) != undefined ? setHasFibo(true) : (setHasFibo(false), setNot("Este número não está na lista"))
-    setFibonacci(list)
   }
 
   function fiboClear() {
