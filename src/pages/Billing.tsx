@@ -55,11 +55,11 @@ export function Billing() {
               </tr>
             </thead>
             <tbody>
-              <tr className="border border-gray-600">
-                <th className="border-x px-3 border-gray-600 p-2 text-gray-200">{minValue.toFixed(2)}</th>
-                <th className="border-x px-3 border-gray-600 p-2  text-gray-200">{maxValue.toFixed(2)}</th>
-                <th className="border-x px-3 border-gray-600 p-2  text-gray-200">{media.toFixed(2)}</th>
-                <th className="border-x px-3 border-gray-600 p-2  text-gray-200">{daysBilling} Dias</th>
+              <tr className="border border-gray-600 text-center">
+                <td className="border-x px-3 border-gray-600 p-2 text-gray-200">{minValue.toFixed(2)}</td>
+                <td className="border-x px-3 border-gray-600 p-2  text-gray-200">{maxValue.toFixed(2)}</td>
+                <td className="border-x px-3 border-gray-600 p-2  text-gray-200">{media.toFixed(2)}</td>
+                <td className="border-x px-3 border-gray-600 p-2  text-gray-200">{daysBilling} Dias</td>
               </tr>
             </tbody>
           </table>
