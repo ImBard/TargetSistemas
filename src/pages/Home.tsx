@@ -26,8 +26,8 @@ export function Home() {
           name={"Billing"}
         />
         <Button
-          function={() => console.log()}
-          name={"Fibonacci"}
+          function={() => go('/percentual')}
+          name={"Percentual"}
         />
         <Button
           function={() => go('/reverse')}
