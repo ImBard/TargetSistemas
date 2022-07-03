@@ -59,7 +59,7 @@ export function Percentual() {
 
     console.log(total)
 
-    
+
 
     setTotal(total)
     setAverage(total / data.length)
@@ -70,51 +70,80 @@ export function Percentual() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex flex-col justify-center items-center">
-        <h1>{average?.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h1>
+      <main className="flex flex-col flex-wrap justify-center items-center m-auto">
 
-        <table className="text-center">
-          <thead className="text-blue-400">
-            <tr>
-              <th className="border p-3 border-gray-600">
-                SP
-              </th>
-              <th className="border px-3 border-gray-600">
-                RJ
-              </th>
-              <th className="border px-3 border-gray-600">
-                MG
-              </th>
-              <th className="border px-3 border-gray-600">
-                ES
-              </th>
-              <th className="border px-3 border-gray-600">
-                Outros
-              </th>
-              <th className="border px-3 border-gray-600">
-                Total
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              {data.map(data => {
-                return (
-                  <td className="border p-3 border-gray-600" key={data.value}>{data.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
-                )
-              })}
-              <td className="border p-3 border-gray-600">{total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
-            </tr>
-            <tr>
-              {data.map(data => {
-                return (
-                  <td className="border p-3 border-gray-600" key={data.value}>{data.percentage}%</td>
-                )
-              })}
-              <td className="border p-3 border-gray-600 text-blue-400">Percentual</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto ">
+          {/* <table className="text-center ">
+            <thead className="text-blue-400">
+              <tr>
+                <th className="border p-3 border-gray-600">
+                  SP
+                </th>
+                <th className="border px-3 border-gray-600">
+                  RJ
+                </th>
+                <th className="border px-3 border-gray-600">
+                  MG
+                </th>
+                <th className="border px-3 border-gray-600">
+                  ES
+                </th>
+                <th className="border px-3 border-gray-600">
+                  Outros
+                </th>
+                <th className="border px-3 border-gray-600">
+                  Total
+                </th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr>
+                {data.map(data => {
+                  return (
+                    <td className="border p-3 border-gray-600" key={data.value}>{data.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                  )
+                })}
+                <td className="border p-3 border-gray-600">{total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+              </tr>
+              <tr>
+                {data.map(data => {
+                  return (
+                    <td className="border p-3 border-gray-600" key={data.value}>{data.percentage}%</td>
+                  )
+                })}
+                <td className="border p-3 border-gray-600 text-blue-400">Percentual</td>
+              </tr>
+            </tbody> 
+          </table>*/}
+          <table>
+            <thead>
+              <tr className="bg-gray-600">
+                <th className="border px-3 border-gray-500 text-blue-400">Estado</th>
+                <th className="border px-3 border-gray-500 text-green-500">Faturamento</th>
+                <th className="border px-3 border-gray-500 text-yellow-300">Percentual</th>
+              </tr>
+            </thead>
+            {data.map(item => {
+              return (
+
+                <tbody key={Math.random()}>
+                  <tr key={Math.random()}>
+                    <th key={item.state} className="border px-3 border-gray-600 text-blue-400">{item.state}</th>
+                    <td key={item.value} className="border p-3 border-gray-600">{item.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td key={item.percentage} className="border p-3 border-gray-600">{item.percentage}%</td>
+                  </tr>
+                </tbody>
+              )
+            })}
+            <tfoot>
+              <tr className="bg-gray-600">
+                <th className="border px-3 border-gray-500 text-blue-400">Total</th>
+                <td className="border px-3 border-gray-500 text-green-500">{total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</td>
+                <td className="border px-3 border-gray-500 text-yellow-300">100%</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
 
       </main>
     </div>
